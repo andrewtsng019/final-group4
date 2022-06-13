@@ -1,0 +1,521 @@
+<html>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;700&display=swap"
+		rel="stylesheet">
+
+	<style>
+		* {
+			justify-content: left;
+			align-items: left;
+			flex-wrap: wrap;
+		}
+
+		h1 {
+			font-family: 'Noto sans TC';
+			font-size: 34px;
+			font-weight: 700;
+			letter-spacing: 3px;
+			color: #657256;
+			display: inline-block;
+		}
+
+		h2 {
+			font-family: 'Noto sans TC';
+			font-size: 24px;
+			font-weight: 500;
+			letter-spacing: 1.5px;
+			color: #657256;
+			display: inline-block;
+		}
+
+		h6 {
+			font-family: 'Inter';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+
+			color: #657256;
+
+		}
+
+		h7 {
+			font-family: 'Inter';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 24px;
+
+			color: #978E8E;
+		}
+
+		p {
+			font-family: 'Noto sans TC';
+			font-size: 22px;
+			font-weight: 400;
+			color: darkslategray;
+			display: inline-block;
+		}
+
+		.desktop-block {
+			width: 100%;
+			background-color: #FEFAE0;
+		}
+
+		#header {
+			background-color: #F0E8B6;
+			width: auto;
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 40px;
+			padding-right: 160px;
+			display: flex;
+			align-items: center;
+		}
+
+
+		#header img {
+			width: 70px;
+			height: 70px;
+		}
+
+
+		.tab {
+			font-size: 20px;
+			line-height: 24px;
+			color: #425828;
+		}
+
+		.quote {
+			position: absolute;
+			top: 320px;
+			left: 690px;
+			width: 420px;
+			color: #4A4949;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 29px;
+		}
+
+		.divide-line {
+			width: 475px;
+			height: 0.5px;
+			background-color: #404040;
+			margin-top: 30px;
+			position: relative;
+
+		}
+
+		.title {
+			width: 140px;
+			color: #425828;
+			font-weight: 700;
+			font-size: 34px;
+			line-height: 29px;
+			margin-top: 40px;
+			position: relative;
+
+		}
+
+		.wheel {
+			display: flex;
+			margin-left: 270px;
+			margin-top: 40px;
+			max-width: 340px;
+			margin-right: 0px;
+
+		}
+
+		.rotate {
+			animation: rotation 2s infinite linear;
+		}
+
+		@keyframes rotation {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(359deg);
+			}
+		}
+
+		.all-article {
+			display: flex;
+			justify-content: center;
+			padding-top: 60px;
+
+		}
+
+		.qt-btn {
+			height: 50px;
+			width: 150px;
+			background-color:rgb(79, 0, 128);
+			color: #ffffff;
+			border-radius: 300px 300px 300px 300px;
+			vertical-align: center;
+			text-align: center;
+			font-weight: 500;
+			font-size: 26px;
+			padding-top: 11px;
+			text-decoration: none;
+			margin: 50px auto 0 0;
+		}
+
+		a{
+			text-decoration: none;
+			color:#ffffff;
+		}
+
+
+		.b {
+			position: absolute;
+			width: 90px;
+			height: 36px;
+			background: #ADC197;
+			border-radius: 30px;
+
+
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+
+
+			color: #262626;
+		}
+
+		.modal-header {
+			position: relative;
+			max-height: 170px;
+			max-width: 420px;
+			margin: 30 40 70 40;
+			padding-top: 20px;
+			flex-direction: row;
+			justify-content: center;
+			border-bottom: none;
+
+		}
+
+		.modal-header img {
+
+			width: 420px;
+			height: 170px;
+			object-fit: fill;
+			display: flex;
+			margin-top: 10px;
+		}
+
+		.modal-content {
+			background-color: rgba(254, 250, 224);
+			height: 530px;
+		}
+
+		.modal-body {
+			vertical-align: middle;
+			display: flex;
+			flex-direction: row;
+			margin-top: 10;
+			margin-bottom: 10;
+			margin-left: 40;
+			margin-right: 40;
+
+		}
+
+		.type {
+			padding-bottom: 30px;
+			background-color: rgba(254, 250, 224);
+			width: 100%;
+		}
+
+		.footer {
+			height: 180px;
+			width: 100%;
+			background-color: #f0e8b6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			font-size: 34px;
+			color: #657256;
+			padding-top: 10px;
+			padding-bottom: auto;
+
+		}
+
+
+		.footer img {
+			object-fit: cover;
+			max-width: 144px;
+			max-height: 150px;
+		}
+
+		.credit {
+			height: 160px;
+			width: auto;
+			margin-left: 170px;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap-reverse;
+			border-left: 2px solid darkgray;
+			padding-left: 20px;
+		}
+
+
+		.daddy {
+			position: relative;
+			height: 360px;
+			width: 540px;
+			margin-left: 70px;
+			margin: 80 0 40 170;
+			background-color: #ffffff;
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.son {
+			position: absolute;
+			width: 560px;
+			height: 275px;
+			left: 540px;
+			top: 30px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 25px;
+			background-color: #ffffff;
+			vertical-align: middle;
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.daddy img {
+			max-width: 540px;
+			max-height: 360px;
+			object-fit: cover;
+			display: flex;
+		}
+
+		.img-box {
+			background-color: rgba(213 179 239 0.5);
+			height: 360px;
+			width: 540px;
+			position: absolute;
+			left: 0px;
+			display: flex;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="desktop-block">
+		<div id="header">
+			<div>
+				<img src="./assets/icon/Logo-noname.png">
+			</div>
+			<div class="tab">
+				・帶你去玩
+			</div>
+			<div class="tab">
+				・帶你去吃
+			</div>
+			<div class="tab">
+				・帶你去看
+			</div>
+
+		</div>
+
+		<div style="width: auto;height: 150px;"></div>
+
+		<div class="wheel">
+			<img src="./assets/icon/wheel-eat.png" class="rotate" max-width="340px" height="340px">
+		</div>
+
+		<div class="quote">
+			真正的吃貨敢於直面粗壯的大腿，敢於挑戰隆起的小腹。
+
+			<div class="divide-line"></div>
+
+			<div class="qt-btn">
+			<a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">帶你去吃</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- 跳出視窗內容 -->
+
+	<div class="modal fade" id="loginModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Header -->
+				<div class="modal-header">
+					<h1>你轉到了...</h1>
+					<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/collage-5-1634714946.jpg?crop=1xw:1xh;center,top&resize=980:*">
+				</div>
+
+				<div class="modal-body">
+
+					<h6>一人也能爽吃麻辣火鍋！東區話題火鍋店「好運郭」全新推出3款亞洲風味功夫湯頭</h6>
+					<h7>入冬之際，好運郭全新推出3款功夫湯頭，再加上讓饕客自由搭配菜盤、肉盤，絕對可以滿足火鍋lover啊！</h7>
+
+					<div type="button" class="btn-close" data-bs-dismiss="modal" style="position:absolute;
+					width: 90px;
+					height: 30px;
+					bottom:10px;
+					right:85px;
+					background:grey;
+					border-radius: 30px;
+					font-weight: 400;
+					font-size: 18px;
+					text-align: center;
+					padding-top:4.5px;
+					vertical-align: center;
+					margin-left: 80px;
+					">
+						看其他
+					</div>
+					<div style="
+					position:absolute;
+					width: 110px;
+					height: 36px;
+					bottom:10px;
+					left:85px;
+					background-color:#7a5b91;
+					border-radius: 30px;
+					font-weight: 400;
+					font-size: 18px;
+					text-align: center;
+					padding:3px;
+					vertical-align: center;">
+						馬上看
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	</div>
+	</div>
+
+	<div class="type">
+
+		<div class="all-article">
+			<h1>所有文章</h1>
+		</div>
+
+		<div class="daddy">
+			<div class="img-box">
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%8B%BC%E5%9C%96-2021-09-06t171510-373-1630920293.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*">
+			<div>
+
+			</div>
+			<div class="son">
+				<h2>不只是咖啡館，還是設計選物店！台北東區最新咖啡館「勺日」</h2>
+				<p>東區最新開幕的「勺日zhuori」，主張「一勺一勺，品味好生活」，因此從空間、選物到餐食，無不講究。
+				</p>
+			</div>
+		</div>
+		<div class="daddy">
+			<div class="img-box">
+
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/collage-1634701659.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*">
+			<div>
+
+			</div>
+			<div class="son">
+				<h2>全台第一家日本精釀啤酒餐廳Far Yeast！菜色全公布～</h2>
+				<p>與日本同步乾杯！全台第一家日本精釀啤酒餐廳「Far Yeast Taiwan Craftbeer Gastropub 源流台灣精釀啤酒餐酒館」開幕了</p>
+			</div>
+		</div>
+
+		<div class="daddy">
+			<div class="img-box">
+
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E5%A5%BD%E9%81%8B%E9%83%AD%E6%8E%A8%E5%87%BA%E5%85%A8%E6%96%B0%E4%BA%9E%E6%B4%B2%E9%A2%A8%E5%91%B3-%E6%97%A5%E5%BC%8F%E6%9F%9A%E5%AD%90%E8%83%A1%E6%A4%92%E9%8D%8B-1638220651.jpg?crop=1xw:1xh;center,top&resize=980:*">
+			<div>
+
+			</div>
+			<div class="son">
+				<h2>一人也能爽吃麻辣火鍋！東區話題火鍋店「好運郭」全新推出3款亞洲風味功夫湯頭</h2>
+				<p>入冬之際，好運郭全新推出3款功夫湯頭，再加上讓饕客自由搭配菜盤、肉盤，絕對可以滿足火鍋lover啊！</p>
+			</div>
+
+		</div>
+
+		<div class="daddy">
+			<div class="img-box">
+
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fotojet-69-1647926195.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*">
+
+			<div class="son">
+				<h2>高雄IG最熱門咖啡館5選推薦！限定預約的老派咖啡屋</h2>
+				<p>從海岸線的復古柑仔店，到藏在巷弄的日式老宅......高雄的咖啡館，好精采！</p>
+			</div>
+
+		</div>
+
+
+	</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="footer">
+		<div>
+			<img src="./assets/icon/Logo-name.png">
+		</div>
+		<div class="credit">
+			<p>記者：ＡＡＡ</p>
+			<p>記者：ＡＡＡ</p>
+			<p>記者：ＡＡＡ</p>
+
+		</div>
+		<div class="credit" style="margin-left:40px">
+			<p>記者：ＡＡＡ</p>
+			<p>記者：ＡＡＡ</p>
+			<p>法賢：法法法</p>
+		</div>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
